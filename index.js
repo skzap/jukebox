@@ -3,6 +3,7 @@
 // QUEUE SYSTEM
 // ADMIN ACCOUNT CAN ADD SONGS WITHOUT PAYING
 // PAYMENTS (PAYPAL + CRYPTO)
+const port = process.env.PORT || 3000
 const config = require('./config.js')
 const yt = require('youtube-info')
 const ytSearch = require('yt-search')
@@ -209,8 +210,6 @@ app.get('/search', function (req, response) {
         })
     })
 })
- 
-app.listen(3000)
 
 function getInfo(provider, id, cb) {
     switch (provider) {
@@ -234,3 +233,6 @@ function getInfo(provider, id, cb) {
             break;
     }
 }
+
+app.listen(port)
+console.log('Opening web server on port '+port)
