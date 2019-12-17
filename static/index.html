@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jukebox</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" id="brand">Jukebox</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <form id="searchForm" class="form-inline my-2 my-lg-0">
+                <input id="searchTerm" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="button">
+                        <span id='searchSpinner' class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style='display: none'></span>
+                    Search
+                </button>
+            </form>
+        </div>
+    </nav>
+    <div class="container" style='margin-top: 20px'>
+        <div class='noQueue text-center' style='display:none'>
+            <h3>Currently no song in queue.</h3>
+        </div>
+        <table class="table" id="searchTable" style='display: none'>
+            <thead>
+                <th>Cover</th>
+                <th>Song</th>
+                <th>Duration</th>
+                <th>Provider</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody id='searchBody'>
+
+            </tbody>
+        </table>
+
+        <!-- payment button -->
+        <table class="table" id="queueTable">
+            <thead>
+                <th>#</th>
+                <th>Cover</th>
+                <th>Song</th>
+                <th>Duration</th>
+                <th>Provider</th>
+            </thead>
+            <tbody id='queueBody'>
+                    
+            </tbody>
+        </table>
+    </div>
+
+    <div id='player'>
+        <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1fcOQ6YbL9Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <!-- <iframe width="100%" height="100%" src="https://open.spotify.com/embed/track/4wSmqFg31t6LsQWtzYAJob" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
